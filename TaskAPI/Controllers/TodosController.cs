@@ -7,6 +7,11 @@ namespace TaskAPI.Controllers
     [ApiController]
     public class TodosController : ControllerBase
     {
+        public TodosController()
+        {
+                
+        }
+
         [HttpGet]
         public IActionResult GetTodos() { return Ok(); }
     }
