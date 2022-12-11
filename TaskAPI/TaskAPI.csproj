@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\TaskAPI.Services\TaskAPI.Services.csproj" />
   </ItemGroup>
 
 </Project>
