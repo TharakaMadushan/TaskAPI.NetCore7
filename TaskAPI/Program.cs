@@ -1,4 +1,5 @@
-using TaskAPI.Services;
+using TaskAPI.Services.Authors;
+using TaskAPI.Services.Todos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddScoped<ITodoReporsitory, ToDoSqlServerService>();
+builder.Services.AddScoped<IAuthorReporsitory, AuthorSqlServerService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
