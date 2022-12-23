@@ -10,7 +10,12 @@ namespace TaskAPI.Services.Todos
     public class TodoService : ITodoReporsitory
     {
 
-        public List<Todo> AllToDos()
+        public List<Todo> AllToDos(int authorId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Todo GetToDo(int id)
         {
             throw new NotImplementedException();
         }
