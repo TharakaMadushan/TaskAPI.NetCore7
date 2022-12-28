@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using TaskAPI.Models;
 
-namespace TaskAPI.Services
+namespace TaskAPI.Services.Todos
 {
     public class TodoService : ITodoReporsitory
     {
-        
+
         public List<Todo> AllToDos()
         {
             throw new NotImplementedException();

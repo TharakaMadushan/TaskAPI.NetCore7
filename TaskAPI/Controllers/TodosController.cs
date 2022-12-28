@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TaskAPI.Services;
+using TaskAPI.Services.Todos;
 
 namespace TaskAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/todos")]
     [ApiController]
     public class TodosController : ControllerBase
     {

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 using TaskAPI.DataAccess;
 using TaskAPI.Models;
 
-namespace TaskAPI.Services
+namespace TaskAPI.Services.Todos
 {
     public class ToDoSqlServerService : ITodoReporsitory
     {
         private readonly ToDoDbContext _context = new ToDoDbContext();
         public List<Todo> AllToDos()
         {
-           return _context.Todos.ToList();
+            return _context.Todos.ToList();
         }
     }
 }

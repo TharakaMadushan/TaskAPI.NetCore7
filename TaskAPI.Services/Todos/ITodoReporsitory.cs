@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TaskAPI.Models;
 
-namespace TaskAPI.Services
+namespace TaskAPI.Services.Todos
 {
     public interface ITodoReporsitory
     {
