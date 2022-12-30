@@ -20,26 +20,14 @@ namespace TaskAPI.Controllers
         }
 
         [HttpGet]
-        public ActionResult<ICollection<AuthorDTO>> GetAuthors()
+        public ActionResult<ICollection<AuthorDTO>> GetAuthors(string job, string search)
         {
-            var authors = _service.GetAllAuthors();
+            var authors = _service.GetAllAuthors(job, search);
             var mappedAuthors = _mapper.Map<ICollection<AuthorDTO>>(authors);
-            //var authorDto = new List<AuthorDTO>();
-
-            //foreach (var author in authors)
-            //{
-            //    authorDto.Add(new AuthorDTO
-            //    {
-            //        Id = author.Id,
-            //        FullName = author.FullName,
-            //        Address = $"{author.AddressNo}, {author.Street}, {author.City}"
-            //    });
-            //}
-
             return Ok(mappedAuthors);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}")] 
         public IActionResult GetAuthor(int id)
         {
             var author = _service.GetAuthor(id);

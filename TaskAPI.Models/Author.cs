@@ -12,13 +12,16 @@ namespace TaskAPI.Models
         public int Id { get; set; }
         [Required]
         [MaxLength(100)]
-        public string FullName { get; set; }
+        public string? FullName { get; set; }
         [MaxLength(150)]
-        public string AddressNo { get; set; }
+        public string? AddressNo { get; set; }
         [MaxLength(150)]
-        public string Street { get; set; }
+        public string? Street { get; set; }
         [MaxLength(50)]
-        public string City { get; set; }
+        public string? City { get; set; }
+        [Required]
+        [MaxLength(30)]
+        public string? JobRole { get; set; }
         public ICollection<Todo> Todos { get; set; } = new List<Todo>();
 
     }
