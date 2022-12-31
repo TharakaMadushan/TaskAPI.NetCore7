@@ -17,7 +17,7 @@ namespace TaskAPI.Services.Authors
            return _context.Authors.ToList();
         }
 
-        public List<Author> GetAllAuthors(string job, string search)
+        public List<Author> GetAllAuthor(string job, string search)
         {
             if (string.IsNullOrWhiteSpace(job) && string.IsNullOrWhiteSpace(search))
             {
@@ -44,6 +44,14 @@ namespace TaskAPI.Services.Authors
         public Author GetAuthor(int id)
         {
             return _context.Authors.Find(id);
+        }
+
+        public Author AddAuthor(Author author)
+        {
+            _context.Authors.Add(author);
+            _context.SaveChanges();
+
+            return _context.Authors.Find(author.Id);
         }
     }
 }
